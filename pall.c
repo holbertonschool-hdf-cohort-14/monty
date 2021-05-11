@@ -24,7 +24,7 @@ void _pall(stack_t *head)
 
     while (head != NULL)
     {
-        printf("%i\n", head->n);
+        fprintf(stdout, "%i\n", head->n);
         head = head-> next; /* print head to tail, need to print tail to head */
     }
 }
