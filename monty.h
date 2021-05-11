@@ -47,10 +47,10 @@ typedef struct instruction_s
 } instruction_t;
 
 /** function **/
-void _pall(stack_t *stack, unsigned line_number);
-void _push(stack_t **stack, unsigned line_number);
-void _pint(stack_t **stack, unsigned line_number);
-
+void _pall(stack_t **stack, unsigned line_number __attribute__((unused)));
+void _push(stack_t **stack, unsigned line_number __attribute__((unused)));
+void _pint(stack_t **stack, unsigned line_number __attribute__((unused)));
+void _nop(stack_t **stack, unsigned int line_number);
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
 /** get_opcode.c **/

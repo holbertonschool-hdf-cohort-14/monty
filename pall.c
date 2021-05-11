@@ -1,30 +1,14 @@
 #include "monty.h"
 
-void _pall(stack_t *stack, unsigned int line_number)
+void _pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
-    (void)line_number;
     stack_t *new_node;
+    int i;
 
-    new_node = malloc(sizeof(stack_t));
-
-    if (new_node == NULL)
+    new_node = *stack;
+    for (i = 0; new_node != NULL; i++)
     {
-        exit(EXIT_FAILURE);
-    }
-
-    if (stack == NULL)
-    {
-        fprintf(stderr, "Error: Can't open file <file>");
-        exit(EXIT_FAILURE);
-    }
-
-    stack = new_node;
-    new_node->prev = NULL;
-    new_node->next = stack;
-    
-    while (stack != NULL)
-    {
-        fprintf(stdout, "%i\n", new_node->n);
-        stack = new_node-> next; /* print head to tail, need to print tail to head */
+        printf("%d\n", new_node->n);
+        new_node = new_node->next;
     }
 }

@@ -5,9 +5,10 @@ int get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
     int i = 0;
 
     instruction_t instruction [] = {
-        {"push", _push},
         {"pall", _pall},
+        {"push", _push},
         {"pint", _pint},
+        {"nop", _nop},
         {NULL,NULL}
     };
 
