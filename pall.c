@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void _pall(stack_t **stack, unsigned int line_number)
+void _pall(stack_t *stack, unsigned int line_number)
 {
     (void)line_number;
     stack_t *new_node;
@@ -22,8 +22,7 @@ void _pall(stack_t **stack, unsigned int line_number)
     new_node->prev = NULL;
     new_node->next = stack;
     
-
-    while (stack!= NULL)
+    while (stack != NULL)
     {
         fprintf(stdout, "%i\n", new_node->n);
         stack = new_node-> next; /* print head to tail, need to print tail to head */

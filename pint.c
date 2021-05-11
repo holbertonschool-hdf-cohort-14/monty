@@ -3,10 +3,14 @@
 void _pint(stack_t **stack, unsigned int line_number)
 {
     (void)line_number;
-    if (stack == NULL)
+
+    if (*stack == NULL)
     {
+        _Error(Error_malloc, op_value, line_number);
         exit(EXIT_FAILURE);
     }
 
-    fprintf(stdout, "%i\n");
+    line_number = (*stack)->n;
+
+    fprintf(stdout, "%i\n", line_number);
 }
