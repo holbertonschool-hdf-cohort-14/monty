@@ -47,13 +47,14 @@ typedef struct instruction_s
 } instruction_t;
 
 /** function **/
-void _pall(stack_t *head);
-void _push(stack_t **head, int n);
-void _pint(stack_t *head);
-void free_stack(stack_t **stack);
+void _pall(stack_t **stack, unsigned line_number);
+void _push(stack_t **stack, unsigned line_number);
+void _pint(stack_t **stack, unsigned line_number);
+
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
 /** get_opcode.c **/
-int *get_opcode(char *op_code, stack_t **stack, unsigned int line_number);
-
+int get_opcode(char *op_code, stack_t **stack, unsigned int line_number);
+/** free **/
+void free_stack(stack_t **stack);
 #endif /* MONTY_H */

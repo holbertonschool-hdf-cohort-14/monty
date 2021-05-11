@@ -1,11 +1,12 @@
 #include "monty.h"
 
-void _pint(stack_t *head)
+void _pint(stack_t **stack, unsigned int line_number)
 {
-    if (head == NULL)
+    (void)line_number;
+    if (stack == NULL)
     {
         exit(EXIT_FAILURE);
     }
 
-    fprintf(stdout, "%i\n", head->n);
+    fprintf(stdout, "%i\n");
 }

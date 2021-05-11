@@ -37,7 +37,7 @@ int main(int argc, char **argv)
         if (op_code)
         {
             op_value = strtok(NULL, DELIMITEUR);
-            handler = get_opcode(op_code, stack, line_number);
+            handler = get_opcode(op_code, &stack, line_number);
             if (handler == 0)
             {
                 _Error(Error_instruction, op_code, line_number);

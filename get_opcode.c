@@ -1,6 +1,6 @@
 #include "monty.h"
 
-int *get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
+int get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
 {
     int i = 0;
 
@@ -15,7 +15,8 @@ int *get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
     {
         if(strcmp(op_code, (instruction + i)->opcode) == 0)
         {
-            return ((instruction + i)->f);
+            instruction[i].f(stack, line_number);
+            return (1);
         }
         i++;
     }    
