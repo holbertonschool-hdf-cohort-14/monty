@@ -50,6 +50,7 @@ typedef struct instruction_s
 void _pall(stack_t *head);
 void _push(stack_t **head, int n);
 void _pint(stack_t *head);
+void free_stack(stack_t **stack);
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
 /** get_opcode.c **/
