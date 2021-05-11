@@ -4,7 +4,7 @@ int (*get_opcode(char s))(va_list)
 {
     int i = 0;
 
-    instruction_t instructions[] = {
+    instruction_t op[] = {
 
         {"push", _push},
         {"pall", _pall}
@@ -12,8 +12,8 @@ int (*get_opcode(char s))(va_list)
 
     while (i < 1)
     {
-        if (instructions[i].opcode[0] == s)
-            return (instructions[i].f);
+        if (op[i].opcode[0] == s)
+            return (op[i].f);
     }
 
     return (NULL);
