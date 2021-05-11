@@ -1,9 +1,19 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define Error_input 100
+#define Error_file 101
+#define Error_instruction 102
+#define Error_malloc 103
+#define DELIMITEUR " \n\t"
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
+
+extern char *op_value;
 
 
 /**
@@ -36,7 +46,13 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/** function **/
 void _pall(stack_t *head);
 void _push(stack_t **head, int n);
+void _pint(stack_t *head);
+/** Error.c **/
+void _Error(int error_num, char *op_code, unsigned int line_number);
+/** get_opcode.c **/
+int *get_opcode(char *op_code, stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
