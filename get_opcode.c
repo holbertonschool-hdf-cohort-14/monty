@@ -16,10 +16,12 @@ int get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
 		{"pall", _pall},
 		{"push", _push},
 		{"pint", _pint},
-		{"nop", _nop},
 		{"pop", _pop},
+		{"swap", _swap},
+		{"nop", _nop},
 		/*{"add", _add},*/
-		{NULL, NULL}};
+		{NULL, NULL}
+		};
 
 	while ((instruction + i)->opcode)
 	{
