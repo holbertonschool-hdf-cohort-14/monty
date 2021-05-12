@@ -1,15 +1,12 @@
 #include "monty.h"
-
 /**
  * delete_nodeint_at_index - delete node at chosen index
  * @head: head node
  * @index: integer
  * Return: 1 if succeeded, -1 if failed
  */
-
 int delete_nodeint_at_index(stack_t **head, unsigned int index)
 {
-
 	stack_t *new, *temp;
 	unsigned int i = 0;
 
