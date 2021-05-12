@@ -23,7 +23,7 @@ void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 
 	new_node->n = atoi(op_value);
 
-	if (*stack)
+	if (*stack == NULL)
 	{
 		new_node->next = *stack;
 		new_node->prev = NULL;
