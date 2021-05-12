@@ -13,9 +13,7 @@ void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 	new_node = malloc(sizeof(stack_t));
 
 	if (new_node == NULL)
-	{
 		_Error(Error_malloc, NULL, line_number);
-	}
 
 	if (_isdigit(op_value) != 0 || op_value == NULL)
 	{
