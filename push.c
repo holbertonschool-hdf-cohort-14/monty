@@ -15,7 +15,7 @@ void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 	if (new_node == NULL)
 		_Error(Error_malloc, NULL, line_number);
 
-	if (_isdigit(op_value) != 0 || op_value == NULL || stack == NULL)
+	if (_isdigit(op_value) != 0 || op_value == NULL)
 	{
 		free(new_node);
 		_Error(Error_push_integer, NULL, line_number);
