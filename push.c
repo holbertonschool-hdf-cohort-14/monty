@@ -21,7 +21,8 @@ void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 		_Error(Error_push_integer, NULL, line_number);
 	}
 
-	new_node->n = atoi(op_value);
+	if (atoi(op_value) >= 0)
+		new_node->n = atoi(op_value);
 
 	if (*stack == NULL)
 	{
