@@ -51,6 +51,11 @@ void _Error(int error_num, char *op_code, unsigned int line_number)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 		break;
+	
+	case 108:
+		fprintf(stderr, "L%d: can't add, stack too short", line_number);
+		exit(EXIT_FAILURE);
+		break;
 	}
 
 }
