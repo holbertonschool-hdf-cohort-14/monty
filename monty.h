@@ -10,7 +10,7 @@
 #define Error_pop 106
 #define Error_swap 107
 #define Error_add 108
-#define DELIMITEUR " \n\t"
+#define DELIMITEUR " \n\t\a"
 
 
 #include <stdio.h>
