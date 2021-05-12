@@ -29,13 +29,10 @@ void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 		new_node->prev = NULL;
 		(*stack)->prev = new_node;
 		*stack = new_node;
-		free(new_node);
 		return;
 	}
 
 	new_node->next = *stack;
 	new_node->prev = NULL;
 	*stack = new_node;
-
-	free(new_node);
 }
