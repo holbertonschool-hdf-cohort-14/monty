@@ -18,6 +18,5 @@ void _swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
     new_node->next = tmp->next;
     new_node->prev = tmp;
     tmp->next = new_node;
-    tmp->prev = NULL;
     *stack = tmp;
 }
