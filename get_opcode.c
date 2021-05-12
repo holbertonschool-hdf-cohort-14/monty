@@ -9,6 +9,7 @@ int get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
         {"push", _push},
         {"pint", _pint},
         {"nop", _nop},
+        /*{"add", _add},*/
         {NULL,NULL}
     };
 
@@ -16,7 +17,8 @@ int get_opcode(char *op_code, stack_t **stack, unsigned int line_number)
     {
         if(strcmp(op_code, (instruction + i)->opcode) == 0)
         {
-            instruction[i].f(stack, line_number);
+            /*instruction[i].f(stack, line_number);*/
+            (instruction + i)->f(stack, line_number);
             return (1);
         }
         i++;
