@@ -9,8 +9,10 @@
 void _swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *tmp, *new_node;
-
-	if ((*stack)->next == NULL || *stack == NULL)
+    int n = 0;
+    
+    n = list_len(stack);
+	if ((*stack)->next == NULL || *stack == NULL || n < 2)
 		_Error(Error_swap, NULL, line_number);
 
 	new_node = *stack;
