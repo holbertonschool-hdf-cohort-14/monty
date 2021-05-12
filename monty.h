@@ -11,6 +11,7 @@
 #define Error_swap 107
 #define Error_add 108
 #define DELIMITEUR " \n\t\a"
+#define Error2_sub 200
 
 
 #include <stdio.h>
@@ -67,6 +68,7 @@ int line_len(stack_t **stack);
 
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
+void _Error2(int error_num, char *op_code, unsigned int line_number);
 
 /** get_opcode.c **/
 int get_opcode(char *op_code, stack_t **stack, unsigned int line_number);
@@ -76,5 +78,6 @@ void free_stack(stack_t **stack);
 
 /** operators functions **/
 void _add(stack_t **stack, unsigned int line_number);
+void _sub(stack_t **stack, unsigned int line_number __attribute__((unused)));
 
 #endif /* MONTY_H */
