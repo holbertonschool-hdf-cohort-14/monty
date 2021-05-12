@@ -10,7 +10,7 @@ void _swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
     stack_t *tmp, *new_node;
 
-    if ((*stack)->next == NULL || *stack == NULL)
+    if ((*stack)->next == NULL || *stack == NULL || stack == NULL)
         _Error(Error_swap, NULL, line_number);
 
     new_node = *stack;
