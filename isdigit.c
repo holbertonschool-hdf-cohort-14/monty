@@ -15,7 +15,7 @@ int _isdigit(char *c)
 
 	while (c[i])
 	{
-		if (isdigit(c[i]) == 0)
+		if (isdigit(c[i]) == 0 && c[i] >= '0')
 			return (1);
 		i++;
 	}
