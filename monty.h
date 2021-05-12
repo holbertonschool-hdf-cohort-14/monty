@@ -68,7 +68,7 @@ int line_len(stack_t **stack);
 
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
-void _Error2(int error_num, char *op_code, unsigned int line_number);
+void _Error2(int error_num,  unsigned int line_number);
 
 /** get_opcode.c **/
 int get_opcode(char *op_code, stack_t **stack, unsigned int line_number);
