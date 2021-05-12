@@ -7,12 +7,12 @@
 
 void free_stack(stack_t **stack)
 {
-    stack_t *tmp = *stack;
+	stack_t *tmp = *stack;
 
-    while (tmp)
-    {
-        tmp = tmp->next;
-        free(*stack);
-        *stack = tmp;
-    }
+	while (tmp)
+	{
+		tmp = tmp->next;
+		free(*stack);
+		*stack = tmp;
+	}
 }
