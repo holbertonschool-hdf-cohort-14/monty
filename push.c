@@ -1,5 +1,9 @@
 #include "monty.h"
 
+/**
+ * _push - 
+ */
+
 void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 
@@ -11,16 +15,24 @@ void _push(stack_t **stack, unsigned int line_number __attribute__((unused)))
         _Error(Error_malloc, NULL, line_number);
     }
 
-   /** if (is_digit_str(data.args[1]) > 0)
+    if (_isdigit(op_value) != 0 || op_value == NULL)
     {
         free(new_node);
-        _Error(Error_instruction);
-    }*/
+        _Error(Error_push_integer, NULL, line_number);
+    }
+
     new_node->n = atoi(op_value);
-    new_node->prev = *stack;
 
     if (*stack)
+    {
+        new_node->next = *stack;
+        new_node->prev = NULL;
         (*stack)->prev = new_node;
+        *stack = new_node;
+        return;
+    }
+
+    new_node->next = *stack;
+    new_node->prev = NULL;
     *stack = new_node;
-    
 }

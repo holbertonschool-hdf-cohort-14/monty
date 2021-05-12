@@ -5,6 +5,8 @@
 #define Error_file 101
 #define Error_instruction 102
 #define Error_malloc 103
+#define Error_push_integer 104
+#define Error_stack_empty 105
 #define DELIMITEUR " \n\t"
 
 
@@ -12,6 +14,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <ctype.h>
 
 extern char *op_value;
 
@@ -51,10 +54,14 @@ void _pall(stack_t **stack, unsigned line_number __attribute__((unused)));
 void _push(stack_t **stack, unsigned line_number __attribute__((unused)));
 void _pint(stack_t **stack, unsigned line_number __attribute__((unused)));
 void _nop(stack_t **stack, unsigned int line_number);
+/** Ancillary function **/
+int _isdigit(char *c);
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
 /** get_opcode.c **/
 int get_opcode(char *op_code, stack_t **stack, unsigned int line_number);
 /** free **/
 void free_stack(stack_t **stack);
+/** linked list operators **/
+/*void _add(stack_t **stack, unsigned int line_number);*/
 #endif /* MONTY_H */
