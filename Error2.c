@@ -5,7 +5,7 @@
  * @op_code: operation code
  * @line_number: line number
  */
-void _Error2(int error_num, char *op_code, unsigned int line_number)
+void _Error2(int error_num, char *op_code __attribute__((unused)), unsigned int line_number)
 {
 	switch (error_num)
 	{
