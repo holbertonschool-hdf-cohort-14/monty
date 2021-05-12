@@ -28,7 +28,6 @@ int main(int argc, char **argv)
 
 	while (getline(&line, &line_len, file) != -1)
 	{
-		line_number++;
 		op_code = strtok(line, DELIMITEUR);
 		if (op_code)
 		{
@@ -41,6 +40,7 @@ int main(int argc, char **argv)
 				fclose(file);
 			}
 		}
+		line_number++;
 	}
 	free_stack(&stack);
 	free(line);
