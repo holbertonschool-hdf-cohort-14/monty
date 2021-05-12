@@ -63,6 +63,7 @@ void _nop(stack_t **stack, unsigned int line_number __attribute__((unused)));
 /** Ancillary functions **/
 int _isdigit(char *c);
 int delete_nodeint_at_index(stack_t **head, unsigned int index);
+int line_len(stack_t **stack);
 
 /** Error.c **/
 void _Error(int error_num, char *op_code, unsigned int line_number);
