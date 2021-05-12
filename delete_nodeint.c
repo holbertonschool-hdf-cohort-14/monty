@@ -15,7 +15,6 @@ int delete_nodeint_at_index(stack_t **head, unsigned int index)
 
 	if (head == NULL || *head == NULL)
 		return (-1);
-
 	if (index == 0)
 	{
 		new = *head;
@@ -23,22 +22,16 @@ int delete_nodeint_at_index(stack_t **head, unsigned int index)
 		free(new);
 		return (1);
 	}
-
 	temp = *head;
-
 	while (temp != NULL && i < index - 1)
 	{
 		temp = temp->next;
 		i++;
 	}
-
 	if (temp == NULL || temp->next == NULL)
 		return (-1);
-
 	new = temp->next->next;
 	free(temp->next);
 	temp->next = new;
-
 return (1);
-
 }
