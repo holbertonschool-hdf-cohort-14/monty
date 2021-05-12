@@ -8,18 +8,17 @@
 
 void _swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
-stack_t *tmp, *new_node;
+	stack_t *tmp, *new_node;
 
-if ((*stack)->next == NULL || *stack == NULL)
-{
-_Error(Error_swap, NULL, line_number);
-}
-new_node = *stack;
-tmp = (*stack)->next;
+	if ((*stack)->next == NULL || *stack == NULL)
+		_Error(Error_swap, NULL, line_number);
 
-new_node->next = tmp->next;
-new_node->prev = tmp;
-tmp->next = new_node;
+	new_node = *stack;
+	tmp = (*stack)->next;
 
-*stack = tmp;
+	new_node->next = tmp->next;
+	new_node->prev = tmp;
+	tmp->next = new_node;
+
+	*stack = tmp;
 }
