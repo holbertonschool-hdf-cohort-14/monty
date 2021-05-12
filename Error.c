@@ -53,7 +53,7 @@ void _Error(int error_num, char *op_code, unsigned int line_number)
 		break;
 	
 	case 108:
-		fprintf(stderr, "L%d: can't add, stack too short", line_number);
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 		break;
 	}
