@@ -7,6 +7,7 @@
 #define Error_malloc 103
 #define Error_push_integer 104
 #define Error_stack_empty 105
+#define Error_pop 106
 #define DELIMITEUR " \n\t"
 
 
@@ -53,6 +54,7 @@ typedef struct instruction_s
 void _pall(stack_t **stack, unsigned line_number __attribute__((unused)));
 void _push(stack_t **stack, unsigned line_number __attribute__((unused)));
 void _pint(stack_t **stack, unsigned line_number __attribute__((unused)));
+void _pop(stack_t **stack, unsigned int line_number __attribute__((unused)));
 void _nop(stack_t **stack, unsigned int line_number);
 /** Ancillary function **/
 int _isdigit(char *c);
