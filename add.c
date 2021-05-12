@@ -7,10 +7,10 @@
 void _add(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	unsigned int add = 0;
-    int n = 0;
+	int n = 0;
 
 	n = line_len(stack);
-    if (n < 2)
+	if (n < 2)
 		_Error(Error_add, NULL, line_number);
 
 	add = (*stack)->n + (*stack)->next->n;
